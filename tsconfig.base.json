@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@full-stack-take-home-exercise/constants": [
+        "libs/constants/src/index.ts"
+      ],
+      "@full-stack-take-home-exercise/models": ["libs/models/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

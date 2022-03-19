@@ -1,11 +1,16 @@
 import { Module } from '@nestjs/common';
 
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { PhoneNumberController } from './controllers/phone-number/phone-number.controller';
+import { MockPhoneDataService } from './services/mock-phone-data/mock-phone-data.service';
+import { PhoneDataService } from './services/phone-data.service';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [PhoneNumberController],
+  providers: [
+    {
+      provide: PhoneDataService,
+      useClass: MockPhoneDataService,
+    },
+  ],
 })
 export class AppModule {}
