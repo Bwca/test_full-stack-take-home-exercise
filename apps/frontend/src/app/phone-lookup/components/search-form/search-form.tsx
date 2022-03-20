@@ -7,9 +7,13 @@ import { FormValues } from '../../models/form-values.model';
 /* eslint-disable-next-line */
 interface SearchFormProps {
   onSubmit: (data: FormValues) => unknown;
+  isSubmissionInProgress: boolean;
 }
 
-export const SearchForm: FC<SearchFormProps> = ({ onSubmit }) => {
+export const SearchForm: FC<SearchFormProps> = ({
+  onSubmit,
+  isSubmissionInProgress,
+}) => {
   const { register, handleSubmit } = useForm<FormValues>();
 
   return (
@@ -26,11 +30,12 @@ export const SearchForm: FC<SearchFormProps> = ({ onSubmit }) => {
         <textarea
           placeholder="message"
           {...register('message')}
-          
           cols={30}
           rows={10}
         ></textarea>
-        <button type="submit">submit</button>
+        <button type="submit" disabled={isSubmissionInProgress}>
+          submit
+        </button>
       </fieldset>
     </form>
   );

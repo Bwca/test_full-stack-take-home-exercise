@@ -8,7 +8,7 @@ import { FormValues } from './models/form-values.model';
 import { DisplayMessage } from './components/display-message/display-message';
 
 export const PhoneLookup: FC = () => {
-  const { error, lookup, entry } = usePhoneLookup();
+  const { error, lookup, entry, isInProgress } = usePhoneLookup();
 
   const handleSubmit = useCallback(({ phone, message }: FormValues) => {
     /** TODO: make sure the number is not NaN */
@@ -18,7 +18,10 @@ export const PhoneLookup: FC = () => {
 
   return (
     <section className={styles['container']}>
-      <SearchForm onSubmit={handleSubmit} />
+      <SearchForm
+        onSubmit={handleSubmit}
+        isSubmissionInProgress={isInProgress}
+      />
       {error && <div>{error}</div>}
       {entry && (
         <>
