@@ -1,1 +1,1 @@
-export * from './lib/api-endpoints.enum';
+export * from './lib/api-endpoints.const';

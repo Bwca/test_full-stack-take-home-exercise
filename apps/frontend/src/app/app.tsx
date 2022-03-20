@@ -1,14 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.scss';
-import NxWelcome from './nx-welcome';
+import { PhoneLookup } from './phone-lookup/phone-lookup';
 
 export function App() {
-  return (
-    <>
-      <NxWelcome title="frontend" />
-      <div />
-    </>
-  );
+  return <PhoneLookup />;
 }
-
-export default App;
