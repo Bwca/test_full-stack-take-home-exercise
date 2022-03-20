@@ -1,13 +1,12 @@
 import { Module } from '@nestjs/common';
 
-import { MessageParserController } from './controllers/message-parser/message-parser.controller';
 import { PhoneNumberController } from './controllers/phone-number/phone-number.controller';
 import { MessageParserService } from './services/message-parser/message-parser/message-parser.service';
 import { MockPhoneDataService } from './services/mock-phone-data/mock-phone-data.service';
 import { PhoneDataService } from './services/phone-data.service';
 
 @Module({
-  controllers: [PhoneNumberController, MessageParserController],
+  controllers: [PhoneNumberController],
   providers: [
     {
       provide: PhoneDataService,
