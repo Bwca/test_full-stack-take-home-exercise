@@ -1,6 +1,7 @@
 # full-stack-take-home-exercise
 
 ```bash
-npm run start -- frontend
-npm run start -- backend
+docker-compose up
 ```
+
+frontent: http://localhost:4900
