@@ -1,4 +1,4 @@
-import { FC, useCallback, useState } from 'react';
+import { FC, useCallback } from 'react';
 
 import { Phone } from './components/phone/phone';
 import { SearchForm } from './components/search-form/search-form';
@@ -8,21 +8,24 @@ import { FormValues } from './models/form-values.model';
 import { DisplayMessage } from './components/display-message/display-message';
 
 export const PhoneLookup: FC = () => {
-  const { error, lookupPhoneByNumber, phoneEntry } = usePhoneLookup();
-  const [message, setMessage] = useState<string | null>(null);
+  const { error, lookup, entry } = usePhoneLookup();
 
   const handleSubmit = useCallback(({ phone, message }: FormValues) => {
-    lookupPhoneByNumber(phone);
-    setMessage(message ?? null);
+    /** TODO: make sure the number is not NaN */
+    lookup(Number(phone), message);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <section className={styles['container']}>
       <SearchForm onSubmit={handleSubmit} />
-      {phoneEntry && <Phone phoneEntry={phoneEntry} />}
       {error && <div>{error}</div>}
-      {message && <DisplayMessage message={message} />}
+      {entry && (
+        <>
+          <Phone phoneEntry={entry.phone} />
+          <DisplayMessage message={entry.text} />
+        </>
+      )}
     </section>
   );
 };

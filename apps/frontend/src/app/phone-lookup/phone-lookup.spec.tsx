@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import PhoneLookup from './phone-lookup';
+import { PhoneLookup } from './phone-lookup';
 
 describe('PhoneLookup', () => {
   it('should render successfully', () => {

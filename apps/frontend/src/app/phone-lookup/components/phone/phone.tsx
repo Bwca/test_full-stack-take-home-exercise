@@ -2,16 +2,23 @@ import { FC } from 'react';
 
 import { PhoneEntry } from '@full-stack-take-home-exercise/models';
 
-import styles from './phone.module.scss';
-
 interface PhoneProps {
   phoneEntry: PhoneEntry;
 }
 
-export const Phone: FC<PhoneProps> = (props: PhoneProps) => {
+export const Phone: FC<PhoneProps> = ({ phoneEntry }) => {
   return (
-    <div className={styles['container']}>
-      <h1>Welcome to PhoneEntry!</h1>
-    </div>
+    <section>
+      {Array.from(Object.entries(phoneEntry))
+        .filter(([, v]) => Boolean(v))
+        .map(([k, v]) => (
+          <div key={k}>
+            <span>
+              <strong>{k}: </strong>
+            </span>
+            <span>{v}</span>
+          </div>
+        ))}
+    </section>
   );
 };

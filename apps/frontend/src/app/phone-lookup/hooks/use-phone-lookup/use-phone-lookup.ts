@@ -2,29 +2,32 @@ import { useState, useCallback } from 'react';
 
 import {
   ErrorResponse,
-  PhoneEntry,
+  PhoneCheckResult,
 } from '@full-stack-take-home-exercise/models';
 
 import { PhoneLookapApi } from '../../api/phone-lookup.api';
 
 interface UsePhoneLookup {
-  lookupPhoneByNumber: (s: string) => Promise<void>;
-  phoneEntry: PhoneEntry | null;
+  lookup: (phone: number, message?: string) => Promise<void>;
+  entry: PhoneCheckResult | null;
   error: string | null;
   isInProgress: boolean;
 }
 
 export function usePhoneLookup(): UsePhoneLookup {
-  const [phoneEntry, setPhoneEntry] = useState<PhoneEntry | null>(null);
+  const [entry, setEntry] = useState<PhoneCheckResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isInProgress, setInProgress] = useState<boolean>(false);
 
-  const lookupPhoneByNumber = useCallback(
-    async (number: string): Promise<void> => {
+  const lookup: UsePhoneLookup['lookup'] = useCallback(
+    async (phone: number, message?: string): Promise<void> => {
       try {
         setInProgress(true);
-        const phone = await PhoneLookapApi.getEntryByPhoneNumber(number);
-        setPhoneEntry(phone);
+        const entry = await PhoneLookapApi.getEntryByPhoneNumber({
+          phone,
+          message,
+        });
+        setEntry(entry);
         setError(null);
       } catch (e) {
         console.error();
@@ -41,8 +44,8 @@ export function usePhoneLookup(): UsePhoneLookup {
   );
 
   return {
-    lookupPhoneByNumber,
-    phoneEntry,
+    lookup,
+    entry,
     error,
     isInProgress,
   };
