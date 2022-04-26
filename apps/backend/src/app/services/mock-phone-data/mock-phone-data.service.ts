@@ -4,13 +4,24 @@ import { PhoneEntry } from '@full-stack-take-home-exercise/models';
 
 import { PhoneDataService } from '../phone-data.service';
 import { DB } from './db';
+import { PhoneEntryTrie } from '../../models/phone-entry-trie';
+import { convertArrayToTrie } from '../../utils/convert-array-to-trie.util';
 
 @Injectable()
 export class MockPhoneDataService implements PhoneDataService {
   public getEntryByPhoneNumber(number: string): PhoneEntry {
-    const result = [...this.loadDb]
-      .sort((a, b) => b.prefix - a.prefix)
-      .find(({ prefix }) => number.startsWith(String(prefix)));
+    let result: PhoneEntry;
+    let currentTrieNode = this.loadDb;
+
+    for (const n of number) {
+      currentTrieNode = currentTrieNode.children[n];
+      if (!currentTrieNode) {
+        break;
+      }
+      if (currentTrieNode.value) {
+        result = currentTrieNode.value;
+      }
+    }
 
     if (!result) {
       throw new Error('Could not locate a phone entry for the entered number!');
@@ -18,7 +29,7 @@ export class MockPhoneDataService implements PhoneDataService {
     return result;
   }
 
-  private get loadDb(): Readonly<Array<Readonly<PhoneEntry>>> {
-    return Object.freeze([...DB]);
+  private get loadDb(): Readonly<PhoneEntryTrie> {
+    return convertArrayToTrie([...DB]);
   }
 }
