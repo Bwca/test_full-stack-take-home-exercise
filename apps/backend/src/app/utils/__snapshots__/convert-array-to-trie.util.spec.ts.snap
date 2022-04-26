@@ -1,0 +1,565 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for trie converter should convert DB to trie 1`] = `
+Object {
+  "children": Object {
+    "1": Object {
+      "children": Object {
+        "2": Object {
+          "children": Object {
+            "0": Object {
+              "children": Object {
+                "4": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1204,
+                    "region": "Manitoba",
+                  },
+                },
+              },
+            },
+            "2": Object {
+              "children": Object {
+                "6": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1226,
+                    "region": "Ontario",
+                  },
+                },
+              },
+            },
+            "3": Object {
+              "children": Object {
+                "6": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1236,
+                    "region": "British Columbia",
+                  },
+                },
+              },
+            },
+            "4": Object {
+              "children": Object {
+                "9": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1249,
+                    "region": "Ontario",
+                  },
+                },
+              },
+            },
+            "5": Object {
+              "children": Object {
+                "0": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1250,
+                    "region": "British Columbia",
+                  },
+                },
+              },
+            },
+            "8": Object {
+              "children": Object {
+                "9": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1289,
+                    "region": "Ontario",
+                  },
+                },
+              },
+            },
+          },
+        },
+        "3": Object {
+          "children": Object {
+            "0": Object {
+              "children": Object {
+                "6": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1306,
+                    "region": "Saskatchewan",
+                  },
+                },
+              },
+            },
+            "4": Object {
+              "children": Object {
+                "3": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1343,
+                    "region": "Ontario",
+                  },
+                },
+              },
+            },
+            "6": Object {
+              "children": Object {
+                "5": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1365,
+                    "region": "Ontario",
+                  },
+                },
+              },
+            },
+          },
+        },
+        "4": Object {
+          "children": Object {
+            "0": Object {
+              "children": Object {
+                "3": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1403,
+                    "region": "Alberta",
+                  },
+                },
+              },
+            },
+            "1": Object {
+              "children": Object {
+                "6": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1416,
+                    "region": "Ontario",
+                  },
+                },
+                "8": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1418,
+                    "region": "Québec",
+                  },
+                },
+              },
+            },
+            "3": Object {
+              "children": Object {
+                "1": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1431,
+                    "region": "Manitoba",
+                  },
+                },
+                "7": Object {
+                  "children": Object {
+                    "3": Object {
+                      "children": Object {
+                        "2": Object {
+                          "children": Object {
+                            "9": Object {
+                              "children": Object {},
+                              "value": Object {
+                                "country": "Canada",
+                                "country_code": 1,
+                                "operator": "Lucky Mobile",
+                                "prefix": 1437329,
+                                "region": "Ontario",
+                              },
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1437,
+                    "region": "Ontario",
+                  },
+                },
+                "8": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1438,
+                    "region": "Québec",
+                  },
+                },
+              },
+            },
+            "5": Object {
+              "children": Object {
+                "0": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1450,
+                    "region": "Québec",
+                  },
+                },
+              },
+            },
+          },
+        },
+        "5": Object {
+          "children": Object {
+            "0": Object {
+              "children": Object {
+                "6": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1506,
+                    "region": "New Brunswick",
+                  },
+                },
+              },
+            },
+            "1": Object {
+              "children": Object {
+                "4": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1514,
+                    "region": "Québec",
+                  },
+                },
+                "9": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1519,
+                    "region": "Ontario",
+                  },
+                },
+              },
+            },
+            "7": Object {
+              "children": Object {
+                "9": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1579,
+                    "region": "Québec",
+                  },
+                },
+              },
+            },
+            "8": Object {
+              "children": Object {
+                "1": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1581,
+                    "region": "Québec",
+                  },
+                },
+                "7": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1587,
+                    "region": "Alberta",
+                  },
+                },
+              },
+            },
+          },
+        },
+        "6": Object {
+          "children": Object {
+            "0": Object {
+              "children": Object {
+                "4": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1604,
+                    "region": "British Columbia",
+                  },
+                },
+              },
+            },
+            "1": Object {
+              "children": Object {
+                "3": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1613,
+                    "region": "Ontario",
+                  },
+                },
+              },
+            },
+            "3": Object {
+              "children": Object {
+                "9": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1639,
+                    "region": "Saskatchewan",
+                  },
+                },
+              },
+            },
+            "4": Object {
+              "children": Object {
+                "7": Object {
+                  "children": Object {
+                    "9": Object {
+                      "children": Object {
+                        "9": Object {
+                          "children": Object {
+                            "3": Object {
+                              "children": Object {},
+                              "value": Object {
+                                "country": "Canada",
+                                "country_code": 1,
+                                "operator": "Telus",
+                                "prefix": 1647993,
+                                "region": "Ontario",
+                              },
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1647,
+                    "region": "Ontario",
+                  },
+                },
+              },
+            },
+          },
+        },
+        "7": Object {
+          "children": Object {
+            "0": Object {
+              "children": Object {
+                "5": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1705,
+                    "region": "Ontario",
+                  },
+                },
+                "9": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1709,
+                    "region": "Newfoundland and Labrador",
+                  },
+                },
+              },
+            },
+            "7": Object {
+              "children": Object {
+                "8": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1778,
+                    "region": "British Columbia",
+                  },
+                },
+              },
+            },
+            "8": Object {
+              "children": Object {
+                "0": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1780,
+                    "region": "Alberta",
+                  },
+                },
+              },
+            },
+          },
+        },
+        "8": Object {
+          "children": Object {
+            "0": Object {
+              "children": Object {
+                "7": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1807,
+                    "region": "Ontario",
+                  },
+                },
+              },
+            },
+            "1": Object {
+              "children": Object {
+                "9": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1819,
+                    "region": "Québec",
+                  },
+                },
+              },
+            },
+            "6": Object {
+              "children": Object {
+                "7": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1867,
+                    "region": "Northwest Territories",
+                  },
+                },
+              },
+            },
+            "7": Object {
+              "children": Object {
+                "3": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1873,
+                    "region": "Québec",
+                  },
+                },
+              },
+            },
+          },
+        },
+        "9": Object {
+          "children": Object {
+            "0": Object {
+              "children": Object {
+                "2": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1902,
+                    "region": "Prince Edward Island",
+                  },
+                },
+                "5": Object {
+                  "children": Object {},
+                  "value": Object {
+                    "country": "Canada",
+                    "country_code": 1,
+                    "operator": null,
+                    "prefix": 1905,
+                    "region": "Ontario",
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+      "value": Object {
+        "country": "Canada",
+        "country_code": 1,
+        "operator": null,
+        "prefix": 1,
+        "region": null,
+      },
+    },
+  },
+}
+`;
