@@ -2,24 +2,24 @@ import { PhoneEntry } from '@full-stack-take-home-exercise/models';
 
 import { PhoneEntryTrie } from '../models/phone-entry-trie';
 
-export function convertArrayToTrie(arr: PhoneEntry[]): PhoneEntryTrie {
+export function convertArrayToTrie(phoneEntries: PhoneEntry[]): PhoneEntryTrie {
   const trie: PhoneEntryTrie = {
     children: {},
   };
 
-  arr.forEach((entry) => {
-    const prefixDigits = entry.prefix.toString().split('');
-
+  phoneEntries.forEach((phoneEntry) => {
     let leaf: PhoneEntryTrie = trie;
 
-    prefixDigits.forEach((d) => {
-      if (!leaf.children[d]) {
-        leaf.children[d] = { children: {} };
+    const prefixDigits = phoneEntry.prefix.toString().split('');
+
+    prefixDigits.forEach((digit) => {
+      if (!leaf.children[digit]) {
+        leaf.children[digit] = { children: {} };
       }
-      leaf = leaf.children[d];
+      leaf = leaf.children[digit];
     });
 
-    leaf.value = entry;
+    leaf.value = phoneEntry;
   });
 
   return trie;
